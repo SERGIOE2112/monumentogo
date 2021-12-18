@@ -1,10 +1,10 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoibWp2YWxlbnp1ZWxhIiwiYSI6ImNrb2Fmdm9zZDBpM28ybnFtYTQ2Z2MwMnYifQ.ZY3jTw0-6tjUSOOJXJHsdw'
+mapboxgl.accessToken = 'pk.eyJ1IjoibW9udW1lbnRnbyIsImEiOiJja3hiN2p4b3MzN2lvMndwYXk1YzA0bzQ4In0.00URHCuH13qHvuh28BYBnA'
 
 var map = new mapboxgl.Map({
 	container: 'map',
-	style: 'mapbox://styles/mapbox/streets-v11',
-	center: [-74.082412,4.639386],
-	zoom: 9
+	style: 'mapbox://styles/monumentgo/ckxbh739h2h0v14ppurmslx0l',
+	center: [0,0],
+	zoom: 1
 });
 
 document
@@ -14,7 +14,7 @@ document
 var handler = e.target.id;
 if(e.target.checked){
 	map[handler].enable();
-} else {
+} else {x
 	map[handler].disable();
 }
 });
@@ -84,7 +84,7 @@ map.addControl(
 		accessToken: mapboxgl.accessToken,
 		localGeocoder: forwardGeocoder,
 		zoom: 14,
-		placeholder: 'Ingrese un lugara buscar',
+		placeholder: 'Ingrese un lugar a buscar',
 		mapboxgl: mapboxgl
 	})
 );
