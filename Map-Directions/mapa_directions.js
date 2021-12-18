@@ -3,8 +3,8 @@ mapboxgl.accessToken = 'pk.eyJ1IjoibW9udW1lbnRnbyIsImEiOiJja3hiN2p4b3MzN2lvMndwY
 var map = new mapboxgl.Map({
 	container: 'map',
 	style: 'mapbox://styles/monumentgo/ckxbh739h2h0v14ppurmslx0l',
-	center: [0,0],
-	zoom: 1
+	center: [-102.40459,23.88836],
+	zoom: 4
 });
 
 // Agregar barra de navegacion
@@ -102,3 +102,15 @@ map.addControl(
 // Agregar barra de zoom
 map.addControl(new mapboxgl.NavigationControl());
 
+//Añadir geolocate control to the map
+map.addControl(
+	new mapboxgl.GeolocateControl({
+	positionOptions: {
+	enableHighAccuracy: true
+	},
+	// When active the map will receive updates to the device's location as it changes.
+	trackUserLocation: true,
+	// Draw an arrow next to the location dot to indicate which direction the device is heading.
+	showUserHeading: true
+	})
+);
