@@ -7,6 +7,7 @@ var map = new mapboxgl.Map({
 	zoom: 1
 });
 
+// Agregar barra de navegacion
 document
 .getElementById('listing-group')
 .addEventListener('change', function(e)
@@ -14,11 +15,12 @@ document
 var handler = e.target.id;
 if(e.target.checked){
 	map[handler].enable();
-} else {x
+} else {
 	map[handler].disable();
 }
 });
 
+// Agregar la lista de sitios definidos para buscar
 var customData = {
 	'features': [
 	{
@@ -78,7 +80,7 @@ function forwardGeocoder(query) {
 	return matchingFeatures;
 }
  
-// Add the control to the map.
+// Agregar el geocodificador
 map.addControl(
 	new MapboxGeocoder({
 		accessToken: mapboxgl.accessToken,
@@ -88,3 +90,15 @@ map.addControl(
 		mapboxgl: mapboxgl
 	})
 );
+
+// Agregar rutas
+map.addControl(
+	new MapboxDirections({
+		accessToken: mapboxgl.accessToken,
+	}),
+	"top-left"
+	);
+
+// Agregar barra de zoom
+map.addControl(new mapboxgl.NavigationControl());
+
