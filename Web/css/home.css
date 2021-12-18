@@ -2,6 +2,28 @@
   font-family: sans-serif;
 }
 
+body{
+  background: black;
+}
+
+.cabecera{
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.titulo{
+  color: #fff;
+  margin: 30px auto 10px;
+}
+
 .menu{
   width: 100%;
   height: auto;
@@ -27,7 +49,7 @@
   margin: 30px 30px;
   transition: all 0.3s ease;
   cursor: pointer;
-  border: 1px solid #EF831D;
+  border: 2px solid #EF831D;
   border-radius: 10px;
 }
 
