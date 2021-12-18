@@ -2,9 +2,6 @@
   font-family: sans-serif;
 }
 
-body{
-  background: black;
-}
 
 .cabecera{
   top: 0;
@@ -20,7 +17,6 @@ body{
 }
 
 .titulo{
-  color: #fff;
   margin: 30px auto 10px;
 }
 
